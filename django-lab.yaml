@@ -1,0 +1,45 @@
+name: django-lab
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - uvicorn
+  - gunicorn
+  - psycopg            # PostgreSQL (psycopg3)
+  - mysqlclient        # optional: MySQL/MariaDB
+  - sqlite
+  - libpq
+  - openssl
+  - ca-certificates
+  - tzdata
+
+  # Django core + API
+  - django
+  - djangorestframework
+  - django-cors-headers
+  - pillow
+  - python-dotenv
+  - httpx
+  - requests
+
+  # Dev & testing
+  - black
+  - isort
+  - ruff
+  - mypy
+  - pytest
+  - pytest-django
+  - ipython
+  - pre-commit
+  - types-requests
+
+  - pip:
+      - django-environ
+      - whitenoise
+      - dj-database-url
+      - django-htmx
+      - django-browser-reload
+      - django-crispy-forms
+      - crispy-bootstrap5
+
