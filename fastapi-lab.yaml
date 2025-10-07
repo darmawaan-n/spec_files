@@ -1,0 +1,66 @@
+name: fastapi-lab
+channels:
+  - conda-forge
+dependencies:
+  # --- Core runtime ---
+  - python=3.10
+  - pip
+  - ipython
+  - ipykernel
+
+  # --- FastAPI stack ---
+  - fastapi
+  - uvicorn # ASGI server
+  # - uvloop               # Unix/macOS only. Remove comment if on Linux/macOS.
+  - httptools # fast HTTP parser
+  - watchfiles # auto-reload
+  - websockets
+  - httpx
+  - pydantic
+  - pydantic-settings
+  - python-dotenv
+  - orjson
+  - python-multipart
+  - jinja2
+  - pyyaml
+
+  # --- Time Modules ---
+  - arrow
+  - pendulum
+
+  # --- Data Analysis ---
+  - pandas
+
+  # --- Persistence (pick what you need) ---
+  - sqlalchemy
+  - alembic
+  - asyncpg
+  - aiosqlite
+  - psycopg2
+  - redis-py # Python Redis client (import name: redis)
+
+  # --- Auth & validation ---
+  - passlib
+  - bcrypt
+  - cryptography
+  - email-validator
+
+  # --- Logging & resilience ---
+  - loguru
+  - tenacity
+
+  # --- Testing & QA ---
+  - pytest
+  - pytest-asyncio
+  - pytest-cov
+  - coverage
+  - black
+  - ruff
+  - mypy
+  - pre-commit
+
+  # --- pip-only extras ---
+  - pip:
+      - databases[postgresql,sqlite]
+      - python-jose[cryptography]
+      - types-requests
