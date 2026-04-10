@@ -3,7 +3,7 @@ channels:
   - conda-forge
 dependencies:
   # --- Core runtime ---
-  - python=3.10
+  - python=3.12
   - pip
   - ipython
   - ipykernel
@@ -64,3 +64,4 @@ dependencies:
       - databases[postgresql,sqlite]
       - python-jose[cryptography]
       - types-requests
+      - argon2

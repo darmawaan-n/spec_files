@@ -42,4 +42,4 @@ dependencies:
       - django-browser-reload
       - django-crispy-forms
       - crispy-bootstrap5
-
+      - argon2
