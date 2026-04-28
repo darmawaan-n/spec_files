@@ -64,4 +64,4 @@ dependencies:
       - databases[postgresql,sqlite]
       - python-jose[cryptography]
       - types-requests
-      - argon2
+      - argon2-cffi
