@@ -1,0 +1,50 @@
+name: de-lab
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  
+  # Core Data Processing
+  - pyspark=4.1.1      # Includes the Spark jars
+  - openjdk=17         # Crucial: PySpark needs Java to run
+  - pandas
+  - polars             # High-performance DataFrame library
+  - duckdb             # Fast analytical engine (In-process)
+  - pyarrow            # Efficient data storage (Parquet/IPC)
+  - dbt-core           # The standard for SQL transformations
+  - dagster            # Modern orchestrator (alternative to Airflow)
+  
+  # Database & Connectivity
+  - psycopg            # PostgreSQL
+  - sqlalchemy         # SQL Toolkit
+  - sqlalchemy-utils
+  - boto3              # AWS S3 connectivity
+  - python-dotenv
+  - requests
+  - fsspec             # Filesystem specification (S3/GCS/Azure)
+  - s3fs               # S3 Filesystem support for pandas/pyspark
+  - pyyaml>=6.0.3
+
+  # Utilities & Performance
+  - tqdm               # Progress bars for long scripts
+  - lxml
+  - openssl
+  - ca-certificates
+  - tzdata
+
+  # Dev, Testing & Quality
+  - black
+  - isort
+  - ruff
+  - mypy
+  - pytest
+  - ipython
+  - jupyterlab         # For interactive data exploration
+  - pre-commit
+
+  - pip:
+      - delta-spark    # ACID transactions for Spark (Delta Lake)
+      - Great-Expectations # Data quality & validation
+      - dbt-duckdb     # Running dbt locally on DuckDB
+      
